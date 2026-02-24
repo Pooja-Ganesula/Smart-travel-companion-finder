@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { Compass, ShieldCheck, Users, MessageCircle } from 'lucide-react';
 import { useState } from 'react';
@@ -105,6 +105,15 @@ export default function LoginPage() {
 
                         <div className="text-center text-xs text-gray-400 bg-gray-50 rounded-md py-2">
                             Demo: alex@example.com / password123
+                        </div>
+
+                        <div className="text-center pt-2">
+                            <p className="text-sm text-gray-500">
+                                Don't have an account?{' '}
+                                <Link to="/register" className="font-medium text-teal-600 hover:text-teal-500 transition-colors">
+                                    Create one
+                                </Link>
+                            </p>
                         </div>
                     </form>
                 </div>
